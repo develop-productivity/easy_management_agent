@@ -8,6 +8,7 @@
 
 本项目包含了两个agent实例：
 * exercise management Agents: 结合历史行为信息，可以提供次日的锻炼计划；
+
 ![exercise_mgr](asserts/exercise_mgr.jpg.jpeg)
 * project management Agents: 通过定义的项目定义和成员信息，进行项目管理。
 ![exercise_mgr](asserts/project_mgr.jpg.jpeg)
