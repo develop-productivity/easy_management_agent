@@ -7,9 +7,12 @@ import logging
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import END, StateGraph
 from langchain_core.messages import HumanMessage
+import sys
+# import akshare as ak
+import pandas as pd
+import os
 
-
-
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.agent_task_mgr.state import AgentState, TeamMember, Team
 from src.agent_task_mgr.nodes import (
     task_generation_node,
@@ -21,12 +24,10 @@ from src.agent_task_mgr.nodes import (
     router
 )
 from src.tools.task_mgr_api import visalize_project_timeline
-# import akshare as ak
-import pandas as pd
-import os
 
-os.environ['HTTP_PROXY'] = 'http://127.0.0.1:1080'
-os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:1080'
+
+os.environ['HTTP_PROXY'] = 'http://127.0.0.1:1082'
+os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:1082'
 
 
 # Set up logging
@@ -96,7 +97,7 @@ if __name__ == "__main__":
         "team": team,
         "insights": "",
         "iteration_number": 0,
-        "max_iteration": 1,
+        "max_iteration": 3,
         "schedule_iteration": [],
         "task_allocations_iteration": [],
         "risks_iteration": [],

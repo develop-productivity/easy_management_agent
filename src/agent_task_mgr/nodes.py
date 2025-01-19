@@ -209,6 +209,7 @@ def insight_generation_node(state: AgentState):
     schedule = state["schedule"]
     task_allocations=state["task_allocations"]
     risks = state["risks"]
+    # insights = state["insights"]
     prompt = f"""
         You are an expert project manager responsible for generating actionable insights to enhance the project plan.
         **Given:**
@@ -221,7 +222,7 @@ def insight_generation_node(state: AgentState):
             - Highlight any potential bottlenecks, resource conflicts, or high-risk tasks that may jeopardize project success.
             2. **Recommend Enhancements:**
             - Suggest adjustments to task assignments or scheduling to mitigate identified risks.
-            3. **Origanize the result based on **{insights}:**
+            3. **You should strictly output:**
                 - List of insights, keep the result short and to the point
             
         """
