@@ -16,10 +16,12 @@
 ### 环境准备
 1. 克隆或下载项目代码到本地。
     ```
+    git clone https://github.com/develop-productivity/easy_management_agent.git
     ```
 
 2. 确保已安装所需的依赖库，可以使用以下命令安装：
     ```bash
+    cd easy_management_agent
     pip install -r requirements.txt
     ```
 
@@ -34,4 +36,7 @@
 为了运行exercise management Agents 需要准备以下文件：
 * `behavior_history.csv`: 包含了 `date`, `tasks`, `duration`, `intensity`, `calories`, `mood`, `sleep` 表头
 
-### 运行结果
+### 运行文件
+为了方便学习，准备两个`jupyter`文件：`task_mgr.ipynb`和`project_mgr.ipynb`
+
+分别对应了健身和项目管理的agents 对应的文件。提高了整体程序的可读性，易于新手理解。
